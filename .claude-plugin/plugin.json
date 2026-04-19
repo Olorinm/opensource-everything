@@ -1,0 +1,18 @@
+{
+  "name": "opensource-everything",
+  "version": "0.2.0",
+  "description": "Reference-driven product replication with bundled MCP tools for computer-use import, capture, diff, spec generation, and verification.",
+  "author": {
+    "name": "OpenSource Everything Contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "computer-use",
+    "mcp",
+    "product-replication",
+    "verification"
+  ],
+  "skills": "./skills",
+  "mcpServers": "./adapters/claude-code/.mcp.json"
+}

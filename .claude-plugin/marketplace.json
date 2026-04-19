@@ -1,0 +1,21 @@
+{
+  "name": "opensource-everything-marketplace",
+  "owner": {
+    "name": "OpenSource Everything Contributors"
+  },
+  "metadata": {
+    "description": "Reference-driven product replication plugins for Claude Code.",
+    "version": "0.2.0"
+  },
+  "plugins": [
+    {
+      "name": "opensource-everything",
+      "source": "./",
+      "description": "Capture live products, generate clone specs, produce fixtures, diff screenshots, and verify implementation parity.",
+      "version": "0.2.0",
+      "author": {
+        "name": "OpenSource Everything Contributors"
+      }
+    }
+  ]
+}

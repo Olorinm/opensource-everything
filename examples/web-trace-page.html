@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Trace Recorder Demo</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 40px; }
+      #details { display: none; margin-top: 20px; }
+      #details.open { display: block; }
+      .row { margin-top: 12px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Trace Recorder Demo</h1>
+      <p>Capture a small interaction flow for testing.</p>
+      <button id="start-btn">Start free</button>
+    </header>
+    <section id="details">
+      <div class="row">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="you@example.com" />
+      </div>
+      <div class="row">
+        <button id="submit-btn">Create workspace</button>
+      </div>
+      <p id="result"></p>
+    </section>
+    <script>
+      const details = document.getElementById("details");
+      const result = document.getElementById("result");
+      document.getElementById("start-btn").addEventListener("click", () => {
+        details.classList.add("open");
+        result.textContent = "Signup form opened.";
+      });
+      document.getElementById("submit-btn").addEventListener("click", () => {
+        const email = document.getElementById("email").value;
+        result.textContent = email ? `Workspace created for ${email}` : "Email is required.";
+      });
+    </script>
+  </body>
+</html>

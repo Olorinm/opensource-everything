@@ -1,0 +1,39 @@
+{
+  "name": "opensource-everything",
+  "version": "0.2.0",
+  "description": "Reference-driven product replication workflow with bundled MCP tools, capture pipelines, and reusable skills.",
+  "author": {
+    "name": "OpenSource Everything Contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent",
+    "computer-use",
+    "skills",
+    "mcp",
+    "verification",
+    "spec-generation",
+    "product-replication"
+  ],
+  "skills": "./skills",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "OpenSource Everything",
+    "shortDescription": "Clone products from traces and reference captures",
+    "longDescription": "OpenSource Everything helps Codex turn live product research into traces, fixtures, clone specs, screenshot diffs, and verification reports for disciplined product replication.",
+    "developerName": "OpenSource Everything Contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "Summarize this product trace and generate fixtures.",
+      "Turn this reference session into a clone spec.",
+      "Verify my build against the captured reference."
+    ],
+    "brandColor": "#2563EB",
+    "screenshots": []
+  }
+}

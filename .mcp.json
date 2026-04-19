@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "opensource-everything": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "./src/cli.js",
+        "serve-mcp"
+      ]
+    }
+  }
+}

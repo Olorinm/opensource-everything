@@ -1,0 +1,108 @@
+{
+  "id": "reference-demo",
+  "source": {
+    "name": "Example Product",
+    "url": "https://example.com",
+    "capturedAt": "2026-04-19T00:00:00.000Z"
+  },
+  "summary": "An example capture showing how to describe a product that should be cloned.",
+  "docs": [
+    {
+      "title": "Landing page copy notes",
+      "kind": "notes",
+      "content": "Headline emphasizes speed and a low-friction signup flow."
+    }
+  ],
+  "pages": [
+    {
+      "id": "home",
+      "title": "Home",
+      "url": "https://example.com",
+      "purpose": "Primary entry page",
+      "components": [
+        "top-nav",
+        "hero",
+        "feature-grid",
+        "cta-footer"
+      ],
+      "states": [
+        "default",
+        "mobile",
+        "loading"
+      ],
+      "copy": [
+        "Get started",
+        "See pricing",
+        "Works in your browser"
+      ],
+      "screenshots": [
+        {
+          "path": "./examples/assets/home-reference.png",
+          "label": "desktop-default"
+        }
+      ],
+      "notes": [
+        "Hero copy is not inside a card.",
+        "Primary CTA appears above the fold."
+      ]
+    },
+    {
+      "id": "signup",
+      "title": "Signup",
+      "url": "https://example.com/signup",
+      "purpose": "Account creation flow",
+      "components": [
+        "progress-stepper",
+        "email-field",
+        "password-field",
+        "submit-button"
+      ],
+      "states": [
+        "empty",
+        "validation-error",
+        "submitting"
+      ],
+      "copy": [
+        "Create account",
+        "Already have an account?"
+      ],
+      "screenshots": [
+        {
+          "path": "./examples/assets/signup-reference.png",
+          "label": "form-default"
+        }
+      ],
+      "notes": [
+        "Validation errors are inline and red.",
+        "Submit button remains in a stable position."
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "name": "signup",
+      "goal": "Create a new account",
+      "steps": [
+        {
+          "action": "click",
+          "target": "Get started",
+          "expectedResult": "Navigates to signup page"
+        },
+        {
+          "action": "set_value",
+          "target": "email-field",
+          "expectedResult": "Email appears in the form field"
+        },
+        {
+          "action": "click",
+          "target": "submit-button",
+          "expectedResult": "Request is submitted and loading state appears"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "This reference is intentionally small and text-first.",
+    "Use a richer session file for real product cloning."
+  ]
+}

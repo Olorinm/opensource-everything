@@ -1,0 +1,74 @@
+{
+  "session": {
+    "id": "google-search-demo",
+    "source": {
+      "name": "Google Search",
+      "url": "https://www.google.com"
+    },
+    "summary": "A simple computer-use trace showing how a search flow was observed.",
+    "notes": [
+      "Use observe -> act -> re-observe throughout the flow."
+    ]
+  },
+  "observations": [
+    {
+      "pageId": "google-home",
+      "pageTitle": "Google",
+      "pageUrl": "https://www.google.com",
+      "pagePurpose": "Search landing page",
+      "components": [
+        "search-input",
+        "search-button",
+        "header-links"
+      ],
+      "states": [
+        "default"
+      ],
+      "copy": [
+        "Google Search",
+        "I'm Feeling Lucky"
+      ],
+      "notes": [
+        "Address and search bar are both relevant targets."
+      ]
+    },
+    {
+      "pageId": "google-home",
+      "pageTitle": "Google",
+      "pageUrl": "https://www.google.com",
+      "flow": {
+        "name": "search-keyword",
+        "goal": "Search for a keyword"
+      },
+      "action": "set_value",
+      "target": "address-and-search-bar",
+      "expectedResult": "Keyword is entered into the search field",
+      "observedResult": "The input accepts the full query text."
+    },
+    {
+      "pageId": "google-results",
+      "pageTitle": "Google Results",
+      "pageUrl": "https://www.google.com/search?q=%E5%B0%89%E5%BE%81%E6%85%A7",
+      "pagePurpose": "Search results page",
+      "components": [
+        "search-results-list",
+        "result-snippets",
+        "top-search-bar"
+      ],
+      "states": [
+        "results"
+      ],
+      "copy": [
+        "尉征慧"
+      ],
+      "flow": {
+        "name": "search-keyword",
+        "goal": "Search for a keyword"
+      },
+      "action": "click",
+      "target": "Google Search",
+      "expectedResult": "Search results page opens",
+      "observedResult": "Relevant result cards are visible."
+    }
+  ]
+}

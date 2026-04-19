@@ -1,0 +1,61 @@
+{
+  "summary": "A candidate implementation that covers the home and signup flows.",
+  "pages": [
+    {
+      "id": "home",
+      "title": "Home",
+      "components": [
+        "top-nav",
+        "hero",
+        "feature-grid",
+        "cta-footer"
+      ],
+      "states": [
+        "default",
+        "mobile"
+      ],
+      "copy": [
+        "Get started",
+        "Works in your browser"
+      ],
+      "screenshots": [
+        {
+          "path": "./assets/home-reference.png",
+          "label": "desktop-default"
+        }
+      ]
+    },
+    {
+      "id": "signup",
+      "title": "Signup",
+      "components": [
+        "progress-stepper",
+        "email-field",
+        "password-field",
+        "submit-button"
+      ],
+      "states": [
+        "empty",
+        "validation-error",
+        "submitting"
+      ],
+      "copy": [
+        "Create account",
+        "Already have an account?"
+      ],
+      "screenshots": [
+        {
+          "path": "./assets/signup-candidate.png",
+          "label": "form-default"
+        }
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "name": "signup",
+      "implemented": true,
+      "notes": "Navigation and submit flow are wired."
+    }
+  ]
+}

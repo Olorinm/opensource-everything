@@ -1,0 +1,30 @@
+{
+  "name": "opensource-everything",
+  "version": "0.2.0",
+  "description": "Reference-driven product replication workflow with a bundled MCP server and reusable skills.",
+  "type": "module",
+  "bin": {
+    "ose": "./src/cli.js"
+  },
+  "scripts": {
+    "help": "node ./src/cli.js --help",
+    "skills": "node ./src/cli.js skills",
+    "tools": "node ./src/cli.js tools",
+    "mcp": "node ./src/cli.js serve-mcp"
+  },
+  "keywords": [
+    "agent",
+    "computer-use",
+    "skills",
+    "mcp",
+    "verification",
+    "spec-generation",
+    "product-replication"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "playwright-core": "^1.54.2",
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0"
+  }
+}

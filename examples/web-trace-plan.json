@@ -1,0 +1,54 @@
+{
+  "name": "trace-recorder-demo",
+  "startUrl": "./web-trace-page.html",
+  "session": {
+    "source": {
+      "name": "Trace Recorder Demo"
+    },
+    "summary": "A tiny scripted browser flow for recorder smoke tests."
+  },
+  "actions": [
+    {
+      "type": "observe",
+      "label": "landing",
+      "notes": ["Initial page load before interaction."]
+    },
+    {
+      "type": "click",
+      "label": "open-signup",
+      "target": {
+        "text": "Start free"
+      },
+      "expectedResult": "Signup form opens.",
+      "flow": {
+        "name": "signup",
+        "goal": "Open the signup form"
+      }
+    },
+    {
+      "type": "fill",
+      "label": "fill-email",
+      "target": {
+        "placeholder": "you@example.com"
+      },
+      "value": "trace@example.com",
+      "expectedResult": "Email field contains the new address.",
+      "flow": {
+        "name": "signup",
+        "goal": "Open the signup form"
+      }
+    },
+    {
+      "type": "click",
+      "label": "submit-form",
+      "target": {
+        "text": "Create workspace"
+      },
+      "expectedResult": "Success message appears.",
+      "flow": {
+        "name": "signup",
+        "goal": "Open the signup form"
+      }
+    }
+  ]
+}

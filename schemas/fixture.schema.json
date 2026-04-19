@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/opensource-everything/fixture.schema.json",
+  "title": "OpenSource Everything Fixture Plan",
+  "description": "A generated test-fixture plan used to stress a product clone after observation and before final verification.",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "source": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "kind": { "type": "string" },
+        "derivedFrom": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "summary": { "type": "string" },
+    "fixtures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "kind": { "type": "string" },
+          "priority": {
+            "type": "string",
+            "enum": ["critical", "high", "medium", "low"]
+          },
+          "target": {
+            "type": "object",
+            "properties": {
+              "pageId": { "type": "string" },
+              "flowName": { "type": "string" },
+              "component": { "type": "string" }
+            },
+            "additionalProperties": true
+          },
+          "purpose": { "type": "string" },
+          "steps": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "expectedSignals": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "artifacts": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["id", "name", "kind", "priority", "purpose"],
+        "additionalProperties": false
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["id", "source", "fixtures"],
+  "additionalProperties": false
+}

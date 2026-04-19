@@ -1,0 +1,45 @@
+{
+  "name": "desktop-trace-demo",
+  "session": {
+    "source": {
+      "name": "Desktop Trace Demo"
+    },
+    "summary": "A small plan-driven desktop trace using app activation, typing, keyboard shortcuts, and observation."
+  },
+  "desktopPolicy": {
+    "allowedApps": ["TextEdit"]
+  },
+  "actions": [
+    {
+      "type": "activate_app",
+      "app": "TextEdit",
+      "label": "activate-textedit",
+      "notes": ["Bring TextEdit to the foreground before typing."]
+    },
+    {
+      "type": "keystroke",
+      "key": "n",
+      "modifiers": ["command"],
+      "label": "new-document",
+      "expectedResult": "A new document window is ready."
+    },
+    {
+      "type": "type_text",
+      "text": "Desktop recorder demo",
+      "label": "type-demo-text",
+      "expectedResult": "The demo text appears in the editor."
+    },
+    {
+      "type": "keystroke",
+      "key": "s",
+      "modifiers": ["command"],
+      "label": "save-shortcut",
+      "expectedResult": "The save dialog opens.",
+      "notes": ["This step is useful for editor workflows even if a dialog appears."]
+    },
+    {
+      "type": "observe",
+      "label": "after-save-shortcut"
+    }
+  ]
+}
